@@ -1,0 +1,77 @@
+.container{
+    height: 6rem;
+    width: 100%;
+    margin: 2vh;
+    padding: 4vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    
+}
+/* Ship icon */
+.navBtn{
+    margin-left: 1px;
+}
+.navItem{
+    flex: 1;
+    margin-right: 2vh;
+}
+.navItem:nth-child(2){
+    flex: 3;
+    align-items: stretch;
+}
+.navItem:nth-child(3){
+    justify-content: flex-end;
+}
+
+/* Contact Icon */
+.rightItem{
+    align-self: end;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    
+}
+/* Link Label */
+.listItems{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:  orchid;
+    margin-right: 2rem;
+}
+.spanLabel{
+    padding: 10px;
+    align-self: center;
+    margin-bottom: 2px;
+    border-radius: 10rem;
+    border-width: 2px 1.5em;
+    border-color: orchid
+}
+.navLink{
+    font-weight: 700;
+    font-family: "Inter-Bold", "Inter", sans-serif;
+}
+
+@media screen and (max-width:505px) {
+  .listItems {
+    display: none;
+  }
+  .container{
+    height: 6rem;
+    padding: 10px;
+}
+  
+}
+@media screen and (max-width:750px) {
+  .container{
+    height: 6rem;
+    padding: 10px;
+}
+  
+}
