@@ -33,6 +33,7 @@ export default function Home() {
           <div className={styles.font}>Lucas Lambert</div>
             <Image
               src={'/../public/a-contact.png'}
+              alt='contact'
               height={200}
               width={200}
             />
@@ -45,6 +46,7 @@ export default function Home() {
           <div className={styles.boxTwoFont}>Selected Projects</div>
             <Image
               src={'/../public/b-eye-no-bg.png'}
+              alt='a'
               height={160}
               width={160}
             />
@@ -61,6 +63,7 @@ export default function Home() {
          >
             <Image
               src={'/../public/wave.png'}
+              alt='wave'
               height={120}
               width={120}
             />

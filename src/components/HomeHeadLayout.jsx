@@ -2,7 +2,17 @@ import Image from 'next/image'
 import { useRef } from "react";
 import { motion, useInView, useScroll, useSpring, useTransform, useMotionValue } from "framer-motion";
 import { Inter } from 'next/font/google'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+
+import beamUp from '../../public/beam.png';
+import stickOne from '../../public/stick-1.png';
+import stickLay from '../../public/stick-lay.png'
+import stickHold from '../../public/stick-hold.png'
+import stickReach from '../../public/stick-reach.png'
+import moShip from '../../public/mother-ship.png'
+import bulb from '../../public/bulb-half.png'
+import textPic from '../../public/text.png'
+import plant from '../../public/plant-no-bg.png'
 
 
 function useParallax(value = useMotionValue(0), distance) {
@@ -27,14 +37,16 @@ export const HomeHead = () => {
 <div className={styles.imgSet} ref={ref}>
       <motion.div className={styles.beamShip}>
             <Image
-              src={'/../public/beam.png'}
+              src={beamUp}
+              alt={'beam'}
               height={120}
               width={120}
             />
             </motion.div>
               <motion.div style={{y}} className={styles.stickOne}>
                 <Image
-                  src={'/../public/stick-1.png'}
+                  src={stickOne}
+                  alt='stick-one'
                   height={60}
                   width={60}
                 />
@@ -43,21 +55,24 @@ export const HomeHead = () => {
 
       <motion.div style={{y}} className={styles.stickLay}>
             <Image
-              src={'/../public/stick-lay.png'}
+              src={stickLay}
+              alt='ryan'
               height={60}
               width={60}
             />
             </motion.div>
       <motion.div style={{y}} className={styles.stickHold}>
             <Image
-              src={'/../public/stick-hold.png'}
+              src={stickHold}
+              alt='stickHold'
               height={60}
               width={60}
             />
             </motion.div>
               <motion.div className={styles.stickReach}>
             <Image
-              src={'/../public/stick-reach.png'}
+              src={stickReach}
+              alt='Nooooooooooo'
               height={60}
               width={60}
             />
@@ -72,7 +87,8 @@ export const HomeHead = () => {
             </motion.div> */}
       <motion.div style={{y}} className={styles.motherShip}>
             <Image
-              src={'/../public/mother-ship.png'}
+              src={moShip}
+              alt='Mother ship'
               height={200}
               width={200}
               style={{}}
@@ -80,7 +96,8 @@ export const HomeHead = () => {
             </motion.div>
         <Image  
             className={styles.imgCenter}
-            src={'/../public/bulb-half.png'} 
+            src={bulb}
+            alt='Bulb' 
             height={-200} 
             width={600} 
             style={{
@@ -92,7 +109,8 @@ export const HomeHead = () => {
       
           <Image  
             className={styles.imgText}
-            src={'/../public/text.png'} 
+            src={textPic} 
+            alt='Header Text'
             height={400} 
             width={400} 
             style={{
@@ -102,9 +120,10 @@ export const HomeHead = () => {
             }}
 
           />
-                  <Image  
+          <Image  
             className={styles.img}
-            src={'/../public/plant-no-bg.png'} 
+            src={plant} 
+            alt='Red Plant'
             height={400} 
             width={600}
             style={{

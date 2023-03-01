@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import styles from '../styles/work.module.css'
 import Link from "next/link";
 

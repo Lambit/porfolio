@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css'
 
+import logo from '../../public/l-3-logo.png'
+
 
 const Navbar = () => {
   return (
@@ -9,7 +11,7 @@ const Navbar = () => {
       {/* ship icon */}
       <div className={styles.navItem}>
         <div className={styles.navBtn}> 
-          <Image src='/../public/l-3-logo.png' height={180} width={180} alt='logo' />
+          <Image src={logo} height={180} width={180} alt='logo' />
         </div>
       </div>
 

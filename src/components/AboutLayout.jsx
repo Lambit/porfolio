@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { usePresence } from "framer-motion";
 import styles from '../styles/about.module.css'
 
+import hey from '../../public/a-contact.png';
+
 
 
 
@@ -13,7 +15,7 @@ export const AboutHead = () => {
 			
 		<div className={styles.font}>Lucas Lambert</div>
             <Image
-              src={'/../public/a-contact.png'}
+              src={hey}
 			  alt='hi'
               height={160}
               width={160}
