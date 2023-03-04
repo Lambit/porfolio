@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AboutHead, AboutEd, AboutBag, AboutSkills } from "../components/AboutLayout";
-import { LogoSvg } from "../components/svgs/SvgAnimations";
 import styles from '../styles/about.module.css';
 
 const aboutVariants = {

@@ -64,7 +64,7 @@
 .stickReach{
   position: absolute; 
   left: 120px;
-  top: 506px;
+  top: 566px;
   /* left: -580px; 
   top: 176px;  */
 }
@@ -78,18 +78,18 @@
 .cow{
   position: absolute; 
   left: 240px;
-  top: 340px;
+  top: 400px;
 }
 
 .building{
   position: absolute;
   right: 170px;
-  top: 370px;
+  top: 430px;
 }
 .bigBuild{
   position: absolute;
   right: 328px;
-  top: 170px;
+  top: 233px;
 }
 .imgText{
   align-self: flex-start;

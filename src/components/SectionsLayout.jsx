@@ -3,7 +3,6 @@ import { useInView } from "framer-motion";
 import styles from '../styles/home.module.css';
 
 
-
 function Section({ children }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });

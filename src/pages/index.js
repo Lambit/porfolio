@@ -13,7 +13,7 @@ import { Inter } from 'next/font/google'
 import styles from '../styles/home.module.css';
 const inter = Inter({ subsets: ['latin'] })
 
-import lyDo from '../../public/spaceships/ufo-cruz.png'
+import lyDo from '../../public/spaceships/ufo-cruz.png';
 
 
 

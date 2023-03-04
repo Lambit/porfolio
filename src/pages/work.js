@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { PROJECTS } from "../data/static-data";
-import Image from "next/image";
+
 import { WorkList } from "../components/WorkLayout";
-import styles from '../styles/work.module.css'
+
 
   //     {PROJECTS.map((p) => ( 
           

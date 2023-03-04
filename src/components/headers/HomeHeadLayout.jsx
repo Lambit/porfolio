@@ -12,8 +12,7 @@ import sat from '../../../public/spaceships/sat-two.png'
 import building from '../../../public/planet/building.png'
 import bigBuild from '../../../public/planet/big-build.png'
 import astro from '../../../public/planet/astro.png'
-import moon from '../../../public/planet/moon.png'
-import dip from '../../../public/planet/dipper.png'
+
 
 import stickOne from '../../../public/stick-1.png';
 import stickLay from '../../../public/stick-lay.png'
@@ -21,18 +20,11 @@ import stickHold from '../../../public/stick-hold.png'
 import stickReach from '../../../public/stick-reach.png'
 import cow from '../../../public/cow.png'
 
-import bulb from '../../../public/bulb-half.png'
-import textPic from '../../../public/text.png'
-import plant from '../../../public/plant-no-bg.png'
-import ufo from '../../../public/svg/mother-ship.svg'
-
 
 function useParallax(value = useMotionValue(0), distance) {
   return useTransform( value, [0, 1], [-distance, distance]);
 }
-function useParallaxReverse(value = useMotionValue(1000), distance) {
-  return useTransform( value, [0, 0, 0, 1], [-distance, distance, -distance, distance], );
-}
+
 
 
 export const HomeHead = () => {

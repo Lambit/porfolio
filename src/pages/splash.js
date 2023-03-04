@@ -9,13 +9,11 @@ import WorkPage from './work.js';
 import Link from 'next/link';
 import {  motion } from 'framer-motion';
 import { XEyeAlien, LogoSvg } from '../components/svgs/SvgAnimations.js';
-import { Inter } from 'next/font/google'
-import styles from '../styles/splash.module.css';
-const inter = Inter({ subsets: ['latin'] })
 
-import myGuy from '../../public/a-contact.png'
-import wave from '../../public/wave.png'
-import lyDo from '../../public/spaceships/ufo-cruz.png'
+import styles from '../styles/splash.module.css';
+
+
+
 
 
 export default function Splash() {
