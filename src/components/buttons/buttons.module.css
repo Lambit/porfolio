@@ -1,0 +1,26 @@
+.threeDButton{
+  background-clip: border-box;
+  align-self: center;
+  margin-bottom: 2vh;
+  background: linear-gradient(500deg, rgb(128, 0, 128), #da70d6);
+  color: transparent;
+  border: none;
+  padding: 40px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow:  4px 8px 0 #66ffb2, 3px 16px 26px 0 #66ffb2;
+  
+}
+.font{
+  background-clip: text;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color: transparent;
+  background-color: #66ffb2;
+  font-size: 64px;
+  letter-spacing: -4px;
+  text-align: center ;
+  padding-bottom:  20px;
+  text-shadow: 0 2px 3px  rgb(128, 0, 128);
+}

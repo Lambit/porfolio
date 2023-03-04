@@ -1,48 +1,30 @@
+.wrapper{
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+}
 .container{
-    width: 100%;
-    /* margin: 8vh; */
-    padding: 2vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
+  padding: 2vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* .imgContain{
-    width: 100vh;
-    height: 100vh;
-    margin-top: 6px;
-    align-self: center;
-    justify-content: flex-end;
-    margin-left: 100px;
-    padding: 20px;
-} */
 .listStack {
-  display: flex;
-  flex-direction: column;
-  margin: 4vh;
-  justify-content: space-between;
+  flex: 50%;
+  max-width: 50%;
+  flex-wrap: wrap;
+  padding: 0 4vh 4vh 0;
 }
-.listItems{
-    list-style: none;
-    padding: 10px;
-     margin: 4vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: "Inter-Bold", "Inter", sans-serif;
-    font-size: 16px;
-}
+
 .box {
-  width: 800px;
+  width: 100%;
+  vertical-align: middle;
   border-radius: 30px;
   background: aqua;
   color:#f107a3;
-  padding: 20px;
-  margin-top: 6px;
-    border: none;
+  padding: 2rem;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .font{
@@ -50,51 +32,43 @@
   font-family: "Inter-Bold", "Inter", sans-serif;
   color:#f107a3;
   font-size: 48px;
-  letter-spacing: -4px;
+  letter-spacing: -1px;
   text-align: center ;
-  padding-bottom:  20px
+  padding-bottom:  8px
 }
 
-.repo{
+.btn{
   align-self: center;
   margin-bottom: 2vh;
   background-color: #f107a3;
-  color: aqua;
+  color: #00ffff;
   border: none;
   padding: 15px 20px;
   border-radius: 50px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media (max-width: 900px) {
 
+@media (max-width: 1000px) {
   .listStack{
     margin: 2vh;
     justify-content: center;
     align-items: center;
+    flex: 100%;
+    max-width: 100%;
   }
   .box{
-    /* margin-bottom: 2vh; */
-    width: 25rem;
-    align-self: center;
+    padding: 4vh;
+    width: 100%;
   }
 
 };
 
-@media (min-width: 1000px) and (max-width: 1500px) {
 
-  .listStack{
-    justify-content: center;
-    align-items: center;
-  }
-  .box{
-    /* margin-bottom: 2vh; */
-    width: 25rem;
-    align-self: center;
 
-  }
-};
+
 

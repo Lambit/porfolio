@@ -1,13 +1,15 @@
-import { useRef } from "react";
+import React, { useRef} from "react";
 import { useInView } from "framer-motion";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/home.module.css';
+
+
 
 function Section({ children }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
   return (
-    <section ref={ref} className={styles.section}>
+    <section ref={ref} className={styles.section} >
       <span
         style={{
           transform: isInView ? "none" : "translateX(-200px)",

@@ -1,0 +1,30 @@
+.container{
+    /* display: flex; */
+    /* flex: wrap; */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.logo{
+   order: 1;
+}
+.lyDo{
+    order: 1;
+    flex-grow: 1;
+}
+
+.btn{
+  align-self: center;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  color: #00ffff;
+  border: none;
+  padding: 30px 50px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 20px 10px 0 '#f107a3', 0 6px 20px 0 '#f107a3';
+}

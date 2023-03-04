@@ -33,16 +33,18 @@
   padding-bottom:  20px
 }
 
+
 .box {
   width: 400px;
   border-radius: 30px;
-  background: orangered;
+  background: #ff4500;
   margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button {
   background-color: #66FFB2;
-  color: purple;
+  color: #800080;
   border: none;
   padding: 15px 20px;
   border-radius: 50px;
@@ -51,6 +53,40 @@
   cursor: pointer;
   width: 400px;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.parallax {
+  /* overflow: hidden; */
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  /* white-space: nowrap; */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.scroller {
+  font-weight: 600;
+  color: #ff4500;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+   /* letterSpacing: -2, */
+  font-size: 36px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+   text-shadow:  4px 6px  yellow;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+.section {
+  padding-top: 60vh;
+  padding-bottom: 60vh;
+  position: relative;
 }
 
 
@@ -100,13 +136,22 @@
 }
 
 }
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
   .container{
     display: block;
   }
   .listStack{
     justify-content: center;
     align-items: center;
+  }
+    .button {
+      margin-bottom: 4vh;
+    font-size: 22px;
+    width: 18rem;
+  }
+  .box{
+    margin-bottom: 2vh;
+    width: 18rem;
   }
 
 };

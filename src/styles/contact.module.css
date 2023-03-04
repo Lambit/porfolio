@@ -1,6 +1,7 @@
+/* Header-------- */
 .container{
     width: 100%;
-    margin-top: 20px;
+    margin-bottom: 2vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,18 +10,28 @@
     top:0;
 }
 
-.button {
-   margin: 2vh;
-  background-color: orchid;
-  color: black;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 50px;
-  font-size: 24px;
+.font{
   font-weight: 700;
-  cursor: pointer;
-  width: 400px;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color:#da70d6;
+  font-size: 64px;
+  letter-spacing: -4px;
   text-align: center;
+  text-shadow: 6px 2px  #66ffb2;
+}
+
+/* contact.js---------------- */
+.wrapper{
+ padding: 2px
+
+}
+.lydo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-start;
+  padding-bottom: 10vh;
+  order: 1;
 }
 
 @media (max-width: 505px) {
@@ -36,20 +47,11 @@
 
 
 }
-@media (max-width: 1350px) {
 
-    .container{
-    flex-direction: column;
-    /* padding: 1px;
-    justify-content:start */
-  }
 
-};
 @media (max-width: 1500px) {
   .button {
   font-size: 22px;
   width: 20rem;
   }
-
-
 };

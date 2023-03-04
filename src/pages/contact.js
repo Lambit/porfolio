@@ -1,37 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { XEyeAlien } from "../components/svgs/SvgAnimations";
+import { ContactHead } from "../components/ContactLayout";
+import { ThreeDButton } from "../components/buttons/Buttons";
 import styles from '../styles/contact.module.css';
 
+
 const ContactPage = () => {
+  const [look, setLook] = useState(false);
+
   return (
-        <div className={styles.container}>
-      {/* education */}
+    <div className={styles.wrapper}>
+      <ContactHead />
+
+        {look == true ?
+          <div className={styles.lydo}>
+            <XEyeAlien />
+          </div>
+          : 
+          null
+        }
+
+      <ThreeDButton onClick={(() => { setLook(true)})} />
+    </div>
      
-        <motion.button
-          className={styles.button}
-          whileHover={{scale: 1.2,}}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Link href={'https://twitter.com/Lucas_Lydon'}>Twitter</Link>
-        </motion.button>
+ 
 
-        <motion.button 
-          className={styles.button}
-          whileHover={{scale: 1.2,}}
-          whileTap={{ scale: 0.95 }}
-          >
-            <Link href={'https://www.linkedin.com/in/lucas-lambert-5748601ab/'}>LinkedIn</Link>
-          </motion.button>
-
-        <motion.button 
-          className={styles.button}
-          whileHover={{scale: 1.2,}}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Link href={'https://github.com/Lambit'}>Github</Link>
-        </motion.button>     
-      </div>
+ 
   );
 };
 export default ContactPage;

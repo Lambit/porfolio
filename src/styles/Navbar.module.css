@@ -1,24 +1,21 @@
 .container{
-    height: 6rem;
+    /* height: 6rem; */
     width: 100%;
-    margin: 2vh;
+    margin: auto;
     padding: 4vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: sticky;
     top: 0;
     
 }
 /* Ship icon */
-.navBtn{
-    margin-left: 1px;
-}
-.navItem{
+
+/* .navItem{
     flex: 1;
     margin-right: 2vh;
-}
+} */
 .navItem:nth-child(2){
     flex: 3;
     align-items: stretch;
@@ -45,7 +42,7 @@
     color:  orchid;
     margin-right: 2rem;
 }
-.spanLabel{
+/* .spanLabel{
     padding: 10px;
     align-self: center;
     margin-bottom: 2px;
@@ -74,4 +71,4 @@
     padding: 10px;
 }
   
-}
+} */

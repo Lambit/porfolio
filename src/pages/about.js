@@ -1,7 +1,23 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AboutHead, AboutEd, AboutBag, AboutSkills } from "../components/AboutLayout";
+import { LogoSvg } from "../components/svgs/SvgAnimations";
 import styles from '../styles/about.module.css';
+
+const aboutVariants = {
+    hidden: { opacity: 0, y: '-1vw' },
+    visible: {
+        opacity: 1, y: 0,
+        transition: { 
+          type: 'spring', 
+          delay: .4, 
+          velocity: 6, 
+          damping: 10,    
+        },
+		
+
+    }
+};
 
 
 const AboutPage = () => {
@@ -21,10 +37,14 @@ const AboutPage = () => {
           {school ? "Hide" : "Education"}
 
         </motion.button>
+          {school ? 
+            <AnimatePresence key={'education'} > 
+              <motion.div  className={styles.box} initial='hidden' animate='visible' variants={aboutVariants} >
+                 <AboutEd />
+              </motion.div>
+            </AnimatePresence> 
 
-          <AnimatePresence key={'education'}> 
-            <motion.div className={styles.box}>{school ? <AboutEd /> : null}</motion.div>
-          </AnimatePresence>
+          : null}
       </div>
 
      
@@ -39,9 +59,13 @@ const AboutPage = () => {
 
           </motion.button>
 
-          <AnimatePresence key={'skills'}> 
-            <motion.div className={styles.box}>{showSkills ? <AboutSkills /> : null}</motion.div>
-          </AnimatePresence>
+          {showSkills ? 
+            <AnimatePresence key={'skills'}> 
+              <motion.div className={styles.box} initial='hidden' animate='visible' variants={aboutVariants} >
+                <AboutSkills /> 
+              </motion.div>
+            </AnimatePresence>
+          : null}
         </div>
 
      
@@ -55,10 +79,13 @@ const AboutPage = () => {
               {showBag ? "Hide" : "Utility Bag"}
 
             </motion.button>
-
-              <AnimatePresence key={'util'}> 
-                <motion.div className={styles.box}>{showBag ? <AboutBag /> : null}</motion.div>
-              </AnimatePresence>
+              {showBag ? 
+                <AnimatePresence key={'util'}> 
+                  <motion.div className={styles.box} initial='hidden' animate='visible' variants={aboutVariants}>
+                    <AboutBag /> 
+                  </motion.div>
+                </AnimatePresence>
+              : null}
           </div>
     </div>
   );

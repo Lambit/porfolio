@@ -1,23 +1,34 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { PROJECTS } from "../data/static-data";
 import Image from "next/image";
 import { WorkList } from "../components/WorkLayout";
 import styles from '../styles/work.module.css'
 
+  //     {PROJECTS.map((p) => ( 
+          
+  //           <WorkList {...p}
+  //             key={`${p.id}-${p.title}`}
+  //             id={p.id}
+  //             title={p.title}
+  //             links={p.links}
+  //             details={p.details}
+  //           />
+  //         ))
+  //  }
 
 
-const WorkPage = () => {
+
+function WorkPage ({children})  {
   
 
   return (
-    // <div className={styles.container}>
-      // <div 
-      // className={styles.listStack}
-      // > 
-        <WorkList />
+      
+  
    
-    //        {/* </div>    */}
-    //  {/* </div> */}
+  
+  <WorkList />
+   
+  
       
   );
 };
