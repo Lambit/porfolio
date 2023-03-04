@@ -1,6 +1,6 @@
 import React, { useRef} from "react";
 import { useInView } from "framer-motion";
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 
 
 function Section({ children }) {

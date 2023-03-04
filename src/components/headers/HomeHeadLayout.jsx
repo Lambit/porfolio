@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useRef } from "react";
 import { motion, useInView, useScroll, useSpring, useTransform, useMotionValue, useTime, easeInOut, easeIn } from "framer-motion";
 import { PositiveVelocity, NegativeVelocity } from '../AboutLayout';
-import styles from '../../styles/home.module.css';
+import styles from '../../styles/Home.module.css';
 
 // Images
 // ships

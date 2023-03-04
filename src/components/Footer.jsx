@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {  Linkdin, GitHoob, Twit, Wave, PdRez } from '../components/svgs/SvgAnimations.js';
 import { motion } from "framer-motion";
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 
 const Footer = () => {
   return (
