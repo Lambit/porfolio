@@ -10,7 +10,7 @@ import { PositiveVelocity, NegativeVelocity } from '../components/AboutLayout.js
 import WorkPage from './work.js';
 import ContactPage from './contact.js';
 import { Inter } from 'next/font/google'
-import styles from '../styles/home.module.css';
+import styles from '../styles/Home.module.css';
 const inter = Inter({ subsets: ['latin'] })
 
 import lyDo from '../../public/spaceships/ufo-cruz.png';
