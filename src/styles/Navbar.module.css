@@ -10,19 +10,6 @@
     top: 0;
     
 }
-/* Ship icon */
-
-/* .navItem{
-    flex: 1;
-    margin-right: 2vh;
-} */
-.navItem:nth-child(2){
-    flex: 3;
-    align-items: stretch;
-}
-.navItem:nth-child(3){
-    justify-content: flex-end;
-}
 
 /* Contact Icon */
 .rightItem{
@@ -35,14 +22,14 @@
 /* Link Label */
 .listItems{
     list-style: none;
-    padding: 0;
+    padding: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color:  orchid;
     margin-right: 2rem;
 }
-/* .spanLabel{
+.spanLabel{
     padding: 10px;
     align-self: center;
     margin-bottom: 2px;
@@ -71,4 +58,4 @@
     padding: 10px;
 }
   
-} */
+} 

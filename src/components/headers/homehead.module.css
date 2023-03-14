@@ -1,0 +1,376 @@
+.headWrap{
+    width: 100%;
+    height: 30rem;
+    z-index: -1;
+    overflow: scroll;  
+}
+
+/* -------spaceships----- */
+.motherShip{
+  position: absolute;
+  left: 200px; 
+  top: -100px;
+}
+.abduct{
+  position: absolute;
+  right: 720px;
+  top: 50px;
+}
+.sat{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* -------aliens/sticks------- */
+.stickOne{
+  position: absolute; 
+  left: 200px;
+  top: 60px; 
+}
+.stickTwo{
+  position: absolute; 
+  left: 200px;
+  top: 90px;
+  z-index: 99;
+} 
+.stickLay{
+  position: absolute; 
+  left: 300px;
+  top: 100px;
+}
+.stickReach{
+  position: absolute; 
+  left: 130px;
+  top: 474px;
+}
+.stickHold{
+  position: absolute; 
+  left: 160px;
+  top: 200px;
+}
+.cow{
+  position: absolute; 
+  left: 240px;
+  top: 310px;
+  z-index: -1;
+}
+
+/* ------structures------ */
+.building{
+  position: absolute;
+  right: 170px;
+  top: 333px;
+}
+.bigBuild{
+  position: absolute;
+  right: 328px;
+  top: 233px;
+}
+.gal{
+  position: absolute;
+  right: 400px;
+  top: 70px;
+  z-index: -2;
+}
+.astro{
+  position: absolute;
+  right: 200px;
+  top: 200px;
+
+}
+.dip{
+  position: absolute;
+  right: 600px;
+  top: 100px;
+}
+.zap{
+  position: absolute;
+  right: 200px;
+  top: 180px;
+}
+
+.stars{
+  position: absolute;
+  right: 1000px;
+  top: -180px;
+  z-index: -5;
+  transform: rotate(200deg);
+}
+
+.button{
+  position: absolute; 
+  left: 25rem;
+  top: 35rem;
+  width: '100%';
+  z-index: 10;
+  margin: 10;
+}
+/* .input{
+  display: none;
+  z-index: 20;
+}
+.labelBtn {
+border: 3px solid #52A7D3;
+background-color: #52A7D3;
+color: #000000;
+z-index: 20;
+}
+.input:checked ~ .labelBtn{
+border: 3px solid red;
+background-color: red;
+color: #FFF;
+z-index: 20;
+} */
+@media (max-width: 379px) and  (min-width: 0px) {
+.headWrap{
+    display: none;  
+}
+}
+
+@media (max-width: 600px) and  (min-width: 380px) {
+.headWrap{
+    width: 100%;
+    height: 14rem;
+    padding: 2vh;
+    margin: 2vh;
+    overflow: scroll;  
+}
+.abduct{
+  position: absolute;
+  left: 4rem;
+  top: -12rem;
+  margin-top: 2vw;
+}
+/* sky---------------- */
+.sat{
+    display: none;
+} 
+.gal {
+    display: none;
+}
+.dip {
+    display: none;
+}
+  /* shipsss--------------- */
+  .motherShip{
+      display: none;
+    /* position: absolute;
+    left: 20rem;
+    top: -12rem; */
+  }
+  /* .motherImg{
+    height: 28vw;
+    width: 28vw;
+  } */
+  .stickOne{
+    display: none;
+    /* left: 10rem;
+    top: -2rem; */
+  }
+  .stickHold{
+    display: none;
+    /* left: 7rem;
+    top: 2rem; */
+  }
+  .stickReach{
+    display: none;
+    /* left: 5rem;
+    top: 20rem; */
+  }
+  .stickLay{
+     display: none;
+  }
+  .cow{
+     display: none;
+  }
+  .stickImg{
+    height: 8vw;
+    width: 8vw;
+  }
+  .building{
+  display: none;
+  }
+  .bigBuild{
+    display: none;
+  }
+  .astro{
+    display: none;
+  }
+  .zap {
+    display: none;
+  }
+}
+@media (max-width: 1000px) and  (min-width: 601px) {
+.headWrap{
+    padding: 2vh;
+        height: 14rem;
+    margin: 2vh;
+}
+.abduct{
+  position: absolute;
+  left: 4rem;
+  top: -12rem;
+  margin-top: 2vw;
+}
+/* sky---------------- */
+.sat{
+    display: none;
+} 
+.gal {
+    display: none;
+}
+.dip {
+    display: none;
+}
+  /* shipsss--------------- */
+  .motherShip{
+      display: none;
+    /* position: absolute;
+    left: 20rem;
+    top: -12rem; */
+  }
+  /* .motherImg{
+    height: 28vw;
+    width: 28vw;
+  } */
+  .stickOne{
+    display: none;
+    /* left: 10rem;
+    top: -2rem; */
+  }
+  .stickHold{
+    display: none;
+    /* left: 7rem;
+    top: 2rem; */
+  }
+  .stickReach{
+    display: none;
+    /* left: 5rem;
+    top: 20rem; */
+  }
+  .stickLay{
+     display: none;
+  }
+  .cow{
+     display: none;
+  }
+  .stickImg{
+    height: 8vw;
+    width: 8vw;
+  }
+  .building{
+  display: none;
+  }
+  .bigBuild{
+    display: none;
+  }
+  .astro{
+    display: none;
+  }
+  .zap {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1001px) {
+  .headWrap{
+    width: 100%;
+    height: 250px;
+    justify-self: center;
+    z-index: -1;
+    overflow: scroll;  
+  }
+  /* shipsss--------------- */
+  .motherShip{
+      display: none;
+    /* position: absolute;
+    left: 20rem;
+    top: -12rem; */
+  }
+  /* .motherImg{
+    height: 28vw;
+    width: 28vw;
+  } */
+  .stickOne{
+    display: none;
+    /* left: 10rem;
+    top: -2rem; */
+  }
+  .stickHold{
+    display: none;
+    /* left: 7rem;
+    top: 2rem; */
+  }
+  .stickReach{
+    display: none;
+    /* left: 5rem;
+    top: 20rem; */
+  }
+  .stickLay{
+     display: none;
+  }
+  .cow{
+     display: none;
+  }
+  .stickImg{
+    height: 8vw;
+    width: 8vw;
+  }
+  .building{
+    display: none;
+  }
+  .bigBuild{
+    display: none;
+  }
+  .astro{
+    display: none;
+  }
+  .dip{
+    display: none;
+  }
+  .zap {
+     display:none;
+  }
+  .abduct{
+   display:none;
+  }
+  .gal{
+    display: none;
+  }
+};
+
+@media (max-width: 1400px) and (min-width: 1201px)  {
+  .wrapper {
+    margin: 2px;
+    padding: 2px;
+  }
+  .section{
+    padding: 20px;
+  }
+  .container{
+    margin: 2px;
+  }
+  .font{
+    font-size: 48px;
+    padding-bottom: 0px;;
+  }
+  .boxTwoFont{
+    font-size: 48px;
+    padding-bottom: 0px;;
+  }
+  /* .motherShip{
+    display: none;
+  } */
+  .zap {
+    display: none;
+  }
+  .abduct{
+    position: absolute;
+    right: 20px;
+  }
+  .gal{
+    display: none;
+  }
+  
+}

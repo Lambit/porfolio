@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {  motion } from 'framer-motion';
-import { XEyeAlien, LogoSvg } from '../components/svgs/SvgAnimations.js';
+
 
 import styles from '../styles/splash.module.css';
 
@@ -15,7 +15,7 @@ export default function Splash() {
     <div className={styles.container}>
     
       
-        <div className={styles.lyDo}><XEyeAlien /> </div>
+        {/* <div className={styles.lyDo}><XEyeAlien /> </div> */}
 
          <motion.div style={{borderStyle: 'solid', borderColor:  '#f107a3',}}
                 className={styles.btn} 

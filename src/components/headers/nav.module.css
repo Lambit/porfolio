@@ -1,0 +1,37 @@
+.nav{
+    width: 100%;
+    margin: auto;
+    padding: 6px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(300deg,rgba(98, 0, 111, 0.8), rgb(96, 3, 96, 0.8));
+    color: transparent;
+}
+.navUl{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.navItem{
+    flex: 1;
+    font-family: "Inter-Bold", "Inter", sans-serif;
+    font-weight: 600;
+
+}
+.navItem:nth-child(2){
+    flex: 3;
+    align-items: stretch;
+}
+.navItem:nth-child(3){
+    justify-content: flex-end;
+}
+/* Contact Icon */
+.rightItem{
+    justify-self: flex-end;
+    align-self: right;
+    text-align: right;
+    flex-direction: row;
+    font-family: "Inter-Bold", "Inter", sans-serif;
+    font-weight: 600;
+    
+}

@@ -1,123 +1,7 @@
 .wrapper{
     width: 100%;
     padding: 2vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-/* images in header */
-.imgSet{
-  /* align-self: flex-end; */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    /* z-index: -1; */
-    justify-content: right;
-}
-.headWrap{
-  /* align-self: flex-end; */
-    width: 100%;
-    height: 30rem;
-    /* display: flex;
-    flex-direction: row; */
-    z-index: -1;
-    /* justify-content: right; */
-}
-/* aliens/sticks */
-.beamShip{
-  position: absolute; 
-  left: 200px; 
-  top: 100px;
-}
-.motherShip{
-  position: absolute;
-  right: 820px;
-  top: 150px;
-}
-.astro{
-  position: absolute;
-  right: 180px;
-  top: 160px;
-}
-
-/* sticks-------------------- */
-.stickOne{
-  position: absolute; 
-  left: 200px;
-  top: 100px; 
-}
-.stickTwo{
-  position: absolute; 
-  left: 200px;
-  top: 100px;
-  /* bottom: 10px; */
-  z-index: 99;
-}
-.stickLay{
-  position: absolute; 
-  left: 300px;
-  top: 180px;
-  /* left: -620px; 
-  top: 50px; */
-}
-.stickReach{
-  position: absolute; 
-  left: 120px;
-  top: 566px;
-  /* left: -580px; 
-  top: 176px;  */
-}
-.stickHold{
-  position: absolute; 
-  left: 160px;
-  top: 200px;
-  /* left: -555px; 
-  top: 100px; */
-}
-.cow{
-  position: absolute; 
-  left: 240px;
-  top: 400px;
-}
-
-.building{
-  position: absolute;
-  right: 170px;
-  top: 430px;
-}
-.bigBuild{
-  position: absolute;
-  right: 328px;
-  top: 233px;
-}
-.imgText{
-  align-self: flex-start;
-  margin-right: 4rem;
-  padding-top: 2rem;
-}
-
-.imgCenter{
-  position: absolute;
-  margin-right: 180px;
-  width: 40%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-
-  
-}
-
-.img{
-  align-self: flex-end;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  
-}
-
-
 
 .section {
   box-sizing: border-box;
@@ -127,23 +11,24 @@
   flex-direction: row;
   overflow: hidden;
   padding: 50px;
-  background: black;
+  background:purple;
 }
+
 .container{
-    width: 100%;
-    /* margin-top: 20px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
+  width: 100%;
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 .section:nth-child(3) {
-  background: purple;
+  background: linear-gradient(180deg, rgb(128, 0, 128), #f107a3);
 }
 .section:nth-child(4) {
-  background: linear-gradient(180deg, rgb(128, 0, 128), #f107a3);
+  background: black;
 }
 .section .span {
   display: block;
@@ -175,102 +60,78 @@
   padding-bottom:  20px;
   text-shadow:  8px 4px  #f107a3;
 }
+.foot{
+  position: relative;
+  align-self: end;
+  margin-bottom: 2vh;
+}
+.icon50{
+  display: none;
+}
+.email{
+  position: relative;
+  text-align: end;
+  margin-top: 2vh;
+  padding: 1rem;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color:#66ffb2;
+  font-size: 24px;
+  text-shadow:  2px 2px  #f107a3;
+}
+.iconBtn{
+  border-width: 0;
+  background: transparent;
+  margin: 1rem;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+}
 
-
-
+/* work section */
+.workSec {
+  padding: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
 
  
 /* Tablet and Smaller Desktop */
-@media (max-width: 505px) {
-  .wrapper {
-    margin: 2px;
-    padding: 2px;
-  }
-  .imgSet{
-    height: 200px;
-  }
-  .motherShip{
-    right: 0px;
-    top: -200px;
-  }
-  .beamShip{
-    left: 60px;
-    top: 140px;
-  }
-  .stickOne{
-    left: 80px;
-    top: 80px
-  }
-  .stickHold{
-    left: 100px;
-    top: 120px
-  }
-  .stickLay{
-     display: none;
-  }
-  .stickReach{
-     display: none;
-  }
-  
-  .imgCenter{
-    display: none;
-  }
-  .imgText{
-    display: none;
-    /* height: 300px;
-    width: 300px;
-    margin: 0;
-    top: 0; */
-  }
-  .img{
-    display: none;
-  }
-  .section{
-    padding: 40px;
-  }
-  .container{
-    margin-top: 2px;
-  }
+/*  */
+
+
+@media (max-width: 600px) and (min-width: 0px) {
   .font{
-    font-size: 48px;
-    padding-bottom: 0px;;
+  font-size: 48px;
+  padding-bottom:  4px;
+  text-shadow:  4px 4px  #f107a3;
   }
   .boxTwoFont{
     font-size: 48px;
-    padding-bottom: 0px;;
+    padding-bottom:  4px;
+    text-shadow:  4px 4px  #f107a3;
   }
-  .boxThreeFont{
-    font-size: 48px;
-    padding-bottom: 0px;;
+  /*-----------footer--------------- */
+  .icons{ 
+    justify-content: center;
   }
-    .building{
-  display: none;
-}
-.bigBuild{
- display: none;
-}
-}
-
-
-@media (max-width: 1200px) and (min-width: 505px) {
-  .imgText{
-      display: none;
-  }
-  .motherShip{
+  .icon100{
     display: none;
   }
-  .imgCenter{
-    display: none;
-  }.img{
-      display: none;
+  .icon50{
+    display: flex;
   }
-  .building{
-  display: none;
-}
-.bigBuild{
- display: none;
-}
+  .iconBtn{
+    margin: 10px;
+  }
+  .email{
+    margin-top: 0;
+    font-size: 18px;
+  }
 };
 
 @media (max-width: 1400px) and (min-width: 1200px)  {
@@ -286,18 +147,11 @@
   }
   .font{
     font-size: 48px;
-    padding-bottom: 0px;;
+    padding-bottom: 0px;
   }
   .boxTwoFont{
     font-size: 48px;
-    padding-bottom: 0px;;
-  }
-  .boxThreeFont{
-    font-size: 48px;
-    padding-bottom: 0px;;
-  }
-  .motherShip{
-    display: none;
+    padding-bottom: 0px;
   }
 }
 

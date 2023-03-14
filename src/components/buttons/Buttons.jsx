@@ -13,4 +13,29 @@ export const ThreeDButton = ({onClick}) => {
   );
 };
 
+export const AboutButton = ({onClick}) => {
+  return (
+    <motion.div 
+        className={styles.aboutButton}
+        whileTap={{opacity: .9, scale: .95, boxShadow: '0'}}
+        onClick={onClick}
+    >
+        <div className={styles.fontA}>Continue</div>
+    </motion.div>
+  );
+};
+export const SaveTheEarth = ({onClick}) => {
+  return (
+    <motion.button 
+      type='button'
+      
+        className={styles.aboutButton}
+        whileTap={{opacity: .9, scale: .95, boxShadow: '0'}}
+        onClick={onClick}
+    >
+        <div className={styles.fontA}>Continue</div>
+    </motion.button>
+  );
+};
+
 

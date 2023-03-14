@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { XEyeAlien } from "../components/svgs/SvgAnimations";
+import { XEyeAlien } from '../animations/svg/LogosAndIcons.js';
 import { ContactHead } from "../components/ContactLayout";
 import { ThreeDButton } from "../components/buttons/Buttons";
 import styles from '../styles/contact.module.css';
@@ -20,8 +20,9 @@ const ContactPage = () => {
           : 
           null
         }
-
-      <ThreeDButton onClick={(() => { setLook(true)})} />
+      <div className={styles.btn}>
+      {/* <ThreeDButton onClick={(() => { setLook(true)})} /> */}
+      </div>
     </div>
      
  

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { AboutHead, AboutEd, AboutBag, AboutSkills } from "../components/AboutLayout";
+import { AboutEd, AboutBag, AboutSkills } from "../components/AboutLayout";
 import styles from '../styles/about.module.css';
 
 const aboutVariants = {
@@ -13,9 +13,11 @@ const aboutVariants = {
           velocity: 6, 
           damping: 10,    
         },
-		
-
-    }
+    }, 
+      exit: { 
+        x: '-100vw',
+        transition: { ease: 'easeInOut' }
+     }
 };
 
 
@@ -36,16 +38,18 @@ const AboutPage = () => {
           {school ? "Hide" : "Education"}
 
         </motion.button>
-          {school ? 
-            <AnimatePresence key={'education'} > 
-              <motion.div  className={styles.box} initial='hidden' animate='visible' variants={aboutVariants} >
+       
+            <AnimatePresence key={'education'} onExitComplete> 
+               {school &&
+              <motion.div  className={styles.box} initial='hidden' animate='visible' variants={aboutVariants} exit='exit' >
                  <AboutEd />
               </motion.div>
+              }
             </AnimatePresence> 
 
-          : null}
       </div>
 
+     
      
         <div className={styles.listStack}>
           <motion.button
@@ -60,7 +64,7 @@ const AboutPage = () => {
 
           {showSkills ? 
             <AnimatePresence key={'skills'}> 
-              <motion.div className={styles.box} initial='hidden' animate='visible' variants={aboutVariants} >
+              <motion.div className={styles.box} initial='hidden' animate='visible' exit={{opacity: 0,}} variants={aboutVariants} >
                 <AboutSkills /> 
               </motion.div>
             </AnimatePresence>
@@ -80,7 +84,7 @@ const AboutPage = () => {
             </motion.button>
               {showBag ? 
                 <AnimatePresence key={'util'}> 
-                  <motion.div className={styles.box} initial='hidden' animate='visible' variants={aboutVariants}>
+                  <motion.div className={styles.box} initial='hidden' animate='visible' exit='exit' variants={aboutVariants}>
                     <AboutBag /> 
                   </motion.div>
                 </AnimatePresence>
