@@ -3,7 +3,7 @@
     flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
-    padding: 2vh; 
+    /* padding: 2vh;  */
  }
 .listStack {
   flex: 50%; 
@@ -19,7 +19,7 @@
   align-items: center;
   margin-bottom: 4vh;
   padding: 4vw 0vw 4vw 0vw;
-  max-width: 100%;
+  max-width: 90%;
   vertical-align: middle;
   border-radius: 30px;
   background: aqua;
@@ -36,8 +36,8 @@
   text-align: center ;
 }
 .btn{
-  flex: 1;
-  max-width: 100%;
+  /* flex: 1; */
+  max-width: 90%;
   margin: 2vh 0vh;
   background-color: #f107a3;
   color: #00ffff;
