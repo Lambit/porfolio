@@ -114,7 +114,7 @@ export default function Home() {
           
           </Section>
 
-          <Section className={styles.workSec}  id='myWork'>
+          <Section className={styles.section}  id='myWork'>
             <div className={styles.container}>
             <div className={styles.boxTwoFont}>Selected Projects</div>
 
