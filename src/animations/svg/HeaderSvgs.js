@@ -1,4 +1,4 @@
-import { easeInOut, easeOut, motion, } from "framer-motion";
+import { easeInOut, easeOut, motion } from "framer-motion";
 
 
 const childO = {
@@ -18,7 +18,7 @@ const variants = {
     visible: {
 		
 		rotate: [-10, 20, 10, 20],
-        transition: { repeat: Infinity, duration: 2, repeatType: reverse,  repeatDelay: 4,    },
+        transition: { repeat: Infinity, duration: 2,  repeatDelay: 4,    },
     }
 };
 const astro = {
@@ -493,7 +493,7 @@ z"/>
   );
 };
 
-export const AstroBoy = ({Avariants}) => {
+export const AstroBoy = () => {
 	return(
 		<motion.svg 
 			xmlns="http://www.w3.org/2000/svg" 

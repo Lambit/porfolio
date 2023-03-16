@@ -53,7 +53,7 @@ export const HomeHead = () => {
           <SaveTheEarthBtn  onClick={() => setShow(!show)}/>
              {show &&
           <Barry /> 
-}
+              }
          
 
      
