@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React, { useState, useRef } from "react";
 import { PROJECTS } from "../data/static-data";
-import WorkList from '../components/work/layout';
+import WorkList from '../components/work/layout.jsx';
 import Modal from "../components/modal/Modal";
 import styles from '../components/work/work.module.css'
 

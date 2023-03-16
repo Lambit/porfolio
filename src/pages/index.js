@@ -5,11 +5,10 @@ import { LogoSvg } from '../animations/svg/LogosAndIcons.js';
 import AppLayout from '../components/app-layout/AppLayout.jsx';
 import { HomeHead } from '../components/headers/HomeHeadLayout.jsx';
 import Section from '../components/section/SectionsLayout.jsx';
-import { motion, AnimatePresence, easeIn } from 'framer-motion';
 import AboutPage from './about';
 import { XVelocity } from '../animations/scroll/XaxisInfinite.jsx';
-import WorkPage from './work.js';
-import ContactPage from './contact.js';
+import WorkPage from './work';
+import ContactPage from './contact';
 import { Inter } from 'next/font/google'
 import styles from '../styles/Home.module.css';
 const inter = Inter({ subsets: ['latin'] })
@@ -45,14 +44,7 @@ export default function Home() {
             {/* ------------------------
                   animated header 
             ------------------------*/}
-       
-            <AnimatePresence>
-         
-            <HomeHead 
-            // showAstro={<ThreeDButton onClick={() => setShow(!show)}/>}
-            />
-   
-            </AnimatePresence>
+            <HomeHead />
        
 
             {/* ------------------------

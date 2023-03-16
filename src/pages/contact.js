@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { XEyeAlien } from '../animations/svg/LogosAndIcons.js';
-import ContactHead from "../components/contact/layout";
+import ContactHead from "../components/contact/layout.jsx";
 import styles from '../components/contact/contact.module.css';
 
 

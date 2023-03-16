@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { ABOUT_DATA } from "../../data/static-data";
 import { usePresence, motion } from "framer-motion";
-import styles from './about.module.css'
+import styles from './about.module.css';
 
 	const aboutVariants = {
     	hidden: { opacity: 0, x: '1vw'   },

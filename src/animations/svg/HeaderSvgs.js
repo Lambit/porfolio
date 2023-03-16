@@ -29,7 +29,6 @@ const astro = {
         x: [200, 0], duration: 2,
     	y: [0, 200], duration: 2,
 		scale: 1, duration: 2,
-		// pathLength: { type: "spring", duration: 8, bounce: 160, velocity: 60, ease: easeIn  },
         transition: { delay: 2.5, duration: 8,  },
     },
 	exit:{opacity: 0}
@@ -48,8 +47,6 @@ const duct = {
         opacity: { delay, duration: 1, ease: easeOut , repeat: 2 },
 		scale: 4, duration: .5, repeat: 3,
       },
-	//   exit: '-100vw',
-	//   transition: { ease: 'easeInOut' }
     };
   }
 };

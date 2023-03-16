@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ABOUT_DATA } from "../data/static-data";
 import { AnimatePresence, motion } from "framer-motion";
-import { AboutSkills, AboutLink } from "../components/about/layout";
-import { DropDownBtn } from "../components/buttons/Buttons";
+import { AboutSkills, AboutLink } from "../components/about/layout.jsx";
+import { DropDownBtn } from "../components/buttons/Buttons.jsx";
 import styles from '../components/about/about.module.css';
 
 const aboutVariants = {
