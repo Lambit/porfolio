@@ -1,22 +1,21 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image'
-import { useRef, useState } from "react";
-import { motion, useInView, useScroll, useSpring, useTransform, useMotionValue, useTime, easeInOut, easeIn } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useInView, useScroll, useTransform, useMotionValue, useTime } from "framer-motion";
 import { XVelocity } from '../../animations/scroll/XaxisInfinite.jsx';
 import { Galaxy, AstroBoy, UfoAbduction, Dip, SmBbVg, Stars, BbVg, } from '../../animations/svg/HeaderSvgs.js';
-import { Barry } from '../../animations/svg/Characters.js';
+import { Barry, Zapped } from '../../animations/svg/Characters.js';
 import { SaveTheEarthBtn } from '../buttons/Buttons.jsx';
 import styles from './homehead.module.css';
 
 // Images
-import moShip from '../../../public/spaceships/mother-ship.png'
-import sat from '../../../public/spaceships/sat-two.png'
+import moShip from '../../../public/spaceships/mother-ship.png';
+import sat from '../../../public/spaceships/sat-two.png';
 import stickOne from '../../../public/sticks/stick-1.png';
-import stickLay from '../../../public/sticks/stick-lay.png'
-import stickHold from '../../../public/sticks/stick-hold.png'
-import stickReach from '../../../public/sticks/stick-reach.png'
-import cow from '../../../public/sticks/cow.png'
-import { Zapped,  } from '../../animations/svg/Characters.js';
+import stickLay from '../../../public/sticks/stick-lay.png';
+import stickHold from '../../../public/sticks/stick-hold.png';
+import stickReach from '../../../public/sticks/stick-reach.png';
+import cow from '../../../public/sticks/cow.png';
+
 
 
 
@@ -25,7 +24,7 @@ function useParallax(value = useMotionValue(0), distance) {
 };
 
 
-export const HomeHead = ({ showAstro }) => {
+export const HomeHead = () => {
   // values
   const scrollRef = useRef(null);
   const [show ,setShow] = useState(false);
@@ -49,19 +48,17 @@ export const HomeHead = ({ showAstro }) => {
     <div ref={scrollRef} className={styles.headWrap}  > 
 
       <div className={styles.container}>
-        {/* <motion.div  className={styles.button}>  */}
+      
           
           <SaveTheEarthBtn  onClick={() => setShow(!show)}/>
              {show &&
           <Barry /> 
 }
          
-      {/* </motion.div>   */}
+
      
     </div>
-      {/* <motion.div className={styles.stars}>
-        <Stars  />
-      </motion.div> */}
+  
            
       
       

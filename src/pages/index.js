@@ -16,17 +16,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 import lyDo from '../../public/spaceships/ufo-cruz.png';
 
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
-  },
-  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
-};
+
 
 export default function Home() {
-  const [show ,setShow] = useState(false);
 
   const bounce = {
     visible: {
@@ -34,9 +26,6 @@ export default function Home() {
         transition: { repeat: Infinity, duration: 1},
     },
   };
-
-
-
 
   return (
     <>
@@ -74,7 +63,7 @@ export default function Home() {
                 <div className={styles.font}>
                   Lucas Lambert
                 </div>
-   <LogoSvg height={'200px'} width={'200px'} />
+                  <LogoSvg height={'200px'} width={'200px'} />
          
 
              

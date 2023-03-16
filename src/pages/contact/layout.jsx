@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Wave } from '../../animations/svg/LogosAndIcons.js';
 import styles from './contact.module.css'
 
-
-export const ContactHead = () => {
+export default function ContactHead() {
 
 	return (
 		<div className={styles.container}>

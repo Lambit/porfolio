@@ -1,10 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import styles from './work.module.css'
 
-
-export const WorkList = ({ onClick, title, details, id, layoutId, value }) => {
-
+export default function WorkList({ onClick, title, details, id, layoutId, value }) {
   return (
 
       <div className={styles.listStack} >

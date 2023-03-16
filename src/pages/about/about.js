@@ -23,7 +23,7 @@ const aboutVariants = {
 };
 
 
-const AboutPage = () => {
+export default function AboutPage() {
   const [show, setShow] = useState(null);
   const [showSkills, setShowSkills] = useState(ABOUT_DATA);
   const [isOpen, setIsOpen] = useState(false);  
@@ -129,4 +129,3 @@ const AboutPage = () => {
     
   );
 };
-export default AboutPage;

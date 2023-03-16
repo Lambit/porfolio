@@ -6,7 +6,7 @@ import { ThreeDButton } from "../../components/buttons/Buttons";
 import styles from './contact.module.css';
 
 
-const ContactPage = () => {
+export default function ContactPage() {
   const [look, setLook] = useState(false);
 
   return (
@@ -30,4 +30,3 @@ const ContactPage = () => {
  
   );
 };
-export default ContactPage;
