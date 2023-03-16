@@ -1,6 +1,4 @@
-
-
-import { easeIn, easeInOut, easeOut, motion, reverse } from "framer-motion";
+import { easeInOut, easeOut, motion, } from "framer-motion";
 
 
 const childO = {
