@@ -1,5 +1,5 @@
 
-import { delay, easeInOut, motion, useTransform, useMotionValue } from "framer-motion";
+import { easeInOut, motion, } from "framer-motion";
 
 // transform([0, 100], ["#800080", "#f107a3"]) 
 
@@ -74,7 +74,7 @@ export const LogoSvg = ({height, width,}) =>{
 	width={width} height={height} viewBox="0 250 800 800" 
             initial='hidden'
             animate='visible'
-			exit='eiy'
+			exit='exit'
 	
 	 >
 				<motion.path custom={1} animate='hidden'  fillOpacity={0}  
