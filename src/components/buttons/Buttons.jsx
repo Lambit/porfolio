@@ -1,21 +1,6 @@
-import { delay, easeInOut, motion, useTransform, useMotionValue, cubicBezier } from "framer-motion";
+import {  motion,  } from "framer-motion";
 import styles from './buttons.module.css'  
 
-const yallBen= {
-  hidden: {  opacity: .7,  },
-  visible: {
-   
-  
-      opacity: 1,
-
-	  // boxShadow: [ "#FF0054" ],
-      transition: {
-        opacity: { duration: 2,  ease: easeInOut, repeat: Infinity, }, 
-      },
-  
-   
-  }
-};
 
 export const ThreeDButton = ({onClick}) => {
   return (

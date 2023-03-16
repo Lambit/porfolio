@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { XEyeAlien } from '../../animations/svg/LogosAndIcons.js';
-import { ContactHead } from "./layout";
+import ContactHead from "./layout";
 import { ThreeDButton } from "../../components/buttons/Buttons";
 import styles from './contact.module.css';
 
