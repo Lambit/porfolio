@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { ABOUT_DATA } from "../../data/static-data";
+import { ABOUT_DATA } from "../data/static-data";
 import { AnimatePresence, motion } from "framer-motion";
-import { AboutSkills, AboutLink } from "./layout";
-import { DropDownBtn } from "../../components/buttons/Buttons";
-import styles from './about.module.css';
+import { AboutSkills, AboutLink } from "../components/about/layout";
+import { DropDownBtn } from "../components/buttons/Buttons";
+import styles from '../components/about/about.module.css';
 
 const aboutVariants = {
     hidden: { opacity: 0, y: '-1vw' },

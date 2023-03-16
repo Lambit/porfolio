@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { XEyeAlien } from '../../animations/svg/LogosAndIcons.js';
-import ContactHead from "./layout";
-import { ThreeDButton } from "../../components/buttons/Buttons";
-import styles from './contact.module.css';
+import { XEyeAlien } from '../animations/svg/LogosAndIcons.js';
+import ContactHead from "../components/contact/layout";
+import styles from '../components/contact/contact.module.css';
 
 
 export default function ContactPage() {

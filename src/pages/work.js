@@ -1,12 +1,12 @@
 import dynamic from "next/dynamic";
 import React, { useState, useRef } from "react";
-import { PROJECTS } from "../../data/static-data";
-import WorkList from './layout';
-import Modal from "../../components/modal/Modal";
-import styles from './work.module.css'
+import { PROJECTS } from "../data/static-data";
+import WorkList from '../components/work/layout';
+import Modal from "../components/modal/Modal";
+import styles from '../components/work/work.module.css'
 
 
-export default function WorkPage(projects = dynamic(() => import('../../data/static-data')) ) {
+export default function WorkPage(projects = dynamic(() => import('../data/static-data')) ) {
     const ref = useRef();
     const [selectedId, setSelectedId] = useState(null);
     const [projectData, setProjectData] = useState(PROJECTS);
