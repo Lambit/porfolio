@@ -75,7 +75,7 @@ export const LogoSvg = ({height, width,}) =>{
             initial='hidden'
             animate='visible'
 			exit='eiy'
-	 
+	
 	 >
 				<motion.path custom={1} animate='hidden'  fillOpacity={0}  
 	d="
