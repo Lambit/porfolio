@@ -6,7 +6,7 @@ import AppLayout from '../components/app-layout/AppLayout.jsx';
 import { HomeHead } from '../components/headers/HomeHeadLayout.jsx';
 import Section from '../components/section/SectionsLayout.jsx';
 import { motion, AnimatePresence, easeIn } from 'framer-motion';
-import AboutPage from '/about.js';
+import AboutPage from './about';
 import { XVelocity } from '../animations/scroll/XaxisInfinite.jsx';
 import WorkPage from './work.js';
 import ContactPage from './contact.js';
