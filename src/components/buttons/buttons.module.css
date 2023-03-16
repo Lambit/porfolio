@@ -26,6 +26,43 @@
   padding-bottom:  10px;
   text-shadow: 0 2px 3px  #800080;
 }
+.fontA{
+  align-self: center;
+  background-clip: text;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color: transparent;
+  background-color: #FFF ;
+  font-size: 48px;
+  /* letter-spacing: -4px; */
+  text-align: center ;
+  /* padding-bottom:  10px; */
+  text-shadow: 0 .8px .9px  #ff0055;
+}
+
+.saveWrldBtn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 5rem;
+    left: 2rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    background: linear-gradient(320deg, red, rgba(1, 0, 1, 0.8));
+    box-shadow:  4px 1px 0  #ff0055, 1px 5px 14px 0 #ff0055;
+    z-index: 4; 
+    
+} 
+.saveWrldBtn:active,
+.saveWrldBtn:focus {
+  transform: translateY(2px);
+  box-shadow: 0 0 0;
+  opacity: 0;
+}
+
 
 @media (max-width: 379px) and  (min-width: 0px) {
   .font{
@@ -37,7 +74,6 @@
     border: none;
     border-radius: 50px;
     box-shadow:  2px 4px 0 #66ffb2, 1px 10px 14px 0 #66ffb2 
-    /* 8px 26px 40px 0 #66ffb2; */
   }
 
 }

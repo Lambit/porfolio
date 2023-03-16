@@ -66,12 +66,12 @@ const fillVariants= {
 
 };
 
-export const LogoSvg = () =>{
+export const LogoSvg = ({height, width,}) =>{
 	
   return (
 
 <motion.svg xmlns="http://www.w3.org/2000/svg" 
-	width="200px" height="200px" viewBox="0 250 800 800" 
+	width={width} height={height} viewBox="0 250 800 800" 
             initial='hidden'
             animate='visible'
 			exit='eiy'

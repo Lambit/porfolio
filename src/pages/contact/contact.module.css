@@ -1,0 +1,57 @@
+/* Header-------- */
+.container{
+    width: 100%;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+}
+
+.font{
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color:#da70d6;
+  font-size: 64px;
+  letter-spacing: -4px;
+  text-align: center;
+  text-shadow: 6px 2px  #66ffb2;
+}
+
+/* contact.js---------------- */
+.wrapper{
+ width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lydo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-start;
+  padding-bottom: 10vh;
+  order: 1;
+}
+
+@media (max-width: 400px) and  (min-width: 0px) {
+  .container{
+    width: 100%;
+    margin-bottom: 2vh;
+    justify-content: center;
+
+  }
+  .font{
+    color:#da70d6;
+    font-size: 48px;
+    text-shadow: 4px 4px  #66ffb2;
+    text-align: center;
+  }
+  .wave {
+    display: none;
+  }
+}
+

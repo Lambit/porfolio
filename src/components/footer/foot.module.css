@@ -1,0 +1,48 @@
+.foot{
+  position: relative;
+  align-self: end;
+  margin-bottom: 2vh;
+}
+.icon50{
+  display: none;
+}
+.email{
+  position: relative;
+  text-align: end;
+  margin-top: 2vh;
+  padding: 1rem;
+  font-weight: 700;
+  font-family: "Inter-Bold", "Inter", sans-serif;
+  color:#66ffb2;
+  font-size: 24px;
+  text-shadow:  2px 2px  #f107a3;
+}
+.iconBtn{
+  border-width: 0;
+  background: transparent;
+  margin: 1rem;
+}
+.icons{
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+}
+
+@media (max-width: 600px) and (min-width: 0px) {
+  .icons{ 
+    justify-content: center;
+  }
+  .icon100{
+    display: none;
+  }
+  .icon50{
+    display: flex;
+  }
+  .iconBtn{
+    margin: 10px;
+  }
+  .email{
+    margin-top: 0;
+    font-size: 18px;
+  }
+};

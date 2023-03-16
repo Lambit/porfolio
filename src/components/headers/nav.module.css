@@ -1,21 +1,55 @@
 .nav{
     width: 100%;
     margin: auto;
-    padding: 6px;
-    position: sticky;
-    top: 0;
-    background: linear-gradient(300deg,rgba(98, 0, 111, 0.8), rgb(96, 3, 96, 0.8));
-    color: transparent;
+    padding: 1em;
+    position: fixed;
+    top: 0;  
+    background: linear-gradient(300deg,rgba(98, 0, 111, 0.8), rgba(1, 0, 1, 1));  
+    
 }
+.burg{
+    display: none;
+}
+.sideNav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* top:12px;
+    left: 10px; */
+    bottom: 0;
+    width: 300px;
+    background: linear-gradient(300deg,rgba(98, 0, 111, 0.8), rgba(1, 0, 1, 1));
+    z-index: 3;
+    
+
+}
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(300deg,rgba(226, 99, 243, 0.8), rgba(1, 0, 1, 0.8));
+    color: transparent;
+    box-shadow:  2px 1px 0 #66ffb2, 1px 2px 8px 0 #66ffb2;
+    z-index: 4; 
+} 
 .navUl{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    text-decoration: none;
 }
 .navItem{
     flex: 1;
     font-family: "Inter-Bold", "Inter", sans-serif;
     font-weight: 600;
+    text-decoration: none;
+    
 
 }
 .navItem:nth-child(2){
@@ -34,4 +68,22 @@
     font-family: "Inter-Bold", "Inter", sans-serif;
     font-weight: 600;
     
+    
+}
+.li{
+    list-style: none;
+    background: linear-gradient(300deg,rgba(226, 99, 243, 0.8), rgba(1, 0, 1, 0.8));
+    color: transparent;
+    box-shadow:  2px 1px 0 #66ffb2, 1px 2px 4px 0 #66ffb2;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+@media (max-width: 1000px) and  (min-width: 0px) {
+    .burg{
+        display:inherit;
+    }
+    .nav{
+        display: none;
+    }
 }

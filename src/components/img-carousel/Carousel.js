@@ -43,7 +43,7 @@ const swipePower = (offset, velocity) => {
 };
 
 
-export default function Carousel() {
+export default function Carousel({ projectImg }) {
     const bigD = [imgOne, imgTwo, imgThree];
     const [[page, direction], setPage] = useState([0, 0]);
 
@@ -51,7 +51,7 @@ export default function Carousel() {
   // then wrap that within 0-2 to find our image ID in the array below. By passing an
   // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
   // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
-  const imageIndex = wrap(0, bigD.length, page);
+  const imageIndex = wrap(0, projectImg.length, page);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
@@ -69,8 +69,8 @@ export default function Carousel() {
             animate="center"
             exit="exit"
             transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
+              x: { type: "spring", stiffness: 100, duration: .2  },
+              opacity: { duration: 1 }
             }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
@@ -85,11 +85,11 @@ export default function Carousel() {
               }
             }}
         >
-            <Image
-            src={bigD[imageIndex]}
+          <Image
+            src={projectImg[imageIndex]}
             alt='pal'
             height={400}
-            width={400}
+            width={200}
             />
         </motion.div>
       </AnimatePresence>

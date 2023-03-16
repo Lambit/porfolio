@@ -1,9 +1,13 @@
 .boxMode {
-  max-width: 800px;
+  max-width: 60rem;
+  position: relative;
+  top: -200px;
   margin: 0 auto;
   padding: 4vh 2vh;
   border-radius: 30px;
-  background: rgb(158, 0, 178,  .2);
+  background: transparent;
+  background-color: rgb(241, 7, 163, .2);
+  /* background-color: rgb(158, 0, 178,  .2); */
   border: none;
   text-align: center;
   z-index: 2;
@@ -16,11 +20,11 @@
   border-style: none;
   padding: 4vh 6vh 4vh 6vh;
   margin: 4vh;
-  /* max-width: 60%; */
+  margin-bottom: 6vh;
   align-self: center;
   border-radius: 30px;
   background: linear-gradient(250deg,rgba(98, 0, 111, 0.8), rgb(96, 3, 96));
-  color:  rgb(220, 2, 140);
+  color:  #dc028c;
   font-family: "Inter-Bold", "Inter", sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -40,3 +44,11 @@
   font-size: 64px;
   letter-spacing: -4px;
 } 
+
+@media (max-width: 500px) and  (min-width: 0px) {
+  .btnMod{
+    padding: 2vh 4vh 2vh 4vh;
+
+  }
+
+}

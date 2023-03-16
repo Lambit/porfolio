@@ -1,16 +1,18 @@
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
+import { getDimensions } from "../../hooks/dimensions";
 import { motion, AnimatePresence, 	usePresence, } from "framer-motion";
 import  Overlay  from '../overlay/Overlay';
 import Carousel from "../img-carousel/Carousel";
 import styles from '../modal/modal.module.css'
 
 
-
-export default function Modal({ imgBtn, layoutId, onClick, projTitle }) {
+export default function Modal({ href, layoutId, onClick, projTitle, onClickRepo, projectImg }) {
   const carry = dynamic(() => import('../img-carousel/Carousel'));
     const ref = useRef(null);
   	const [isPresent, safeToRemove] = usePresence();
+    const { height, width } = getDimensions(ref);
     const modal = {
         visible: { 
           opacity: 1,
@@ -28,7 +30,7 @@ export default function Modal({ imgBtn, layoutId, onClick, projTitle }) {
     	!isPresent && ref.current == { opacity: 0 },
         	() => safeToRemove;
     }, [isPresent, safeToRemove]);
-    
+   
   return (
 
     <>
@@ -46,7 +48,7 @@ export default function Modal({ imgBtn, layoutId, onClick, projTitle }) {
           >
             <motion.div className={styles.font}>{projTitle}</motion.div>
           
-              {/* <Carousel /> */}
+              <motion.div ref={ref} className={styles.pic} custom={height }><Carousel projectImg={projectImg} /></motion.div>
          
             <motion.button 
               className={styles.btnMod}
@@ -54,14 +56,16 @@ export default function Modal({ imgBtn, layoutId, onClick, projTitle }) {
               type='button'
               // value={} 
             >
-              Images
+              Close
             </motion.button>
-            <motion.button 
+            <Link href={href} passHref legacyBehavior >
+            <motion.a 
               className={styles.btnMod}
-              onClick={onClick} 
+              onClick={onClickRepo}
             >
-              Repo
-            </motion.button>
+             Repo
+            </motion.a>
+            </Link>
           </motion.div>
      </Overlay>
     

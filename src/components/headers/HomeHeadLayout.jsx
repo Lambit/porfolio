@@ -4,7 +4,8 @@ import { useRef, useState } from "react";
 import { motion, useInView, useScroll, useSpring, useTransform, useMotionValue, useTime, easeInOut, easeIn } from "framer-motion";
 import { XVelocity } from '../../animations/scroll/XaxisInfinite.jsx';
 import { Galaxy, AstroBoy, UfoAbduction, Dip, SmBbVg, Stars, BbVg, } from '../../animations/svg/HeaderSvgs.js';
-import { ThreeDButton } from '../buttons/Buttons.jsx';
+import { Barry } from '../../animations/svg/Characters.js';
+import { SaveTheEarthBtn } from '../buttons/Buttons.jsx';
 import styles from './homehead.module.css';
 
 // Images
@@ -46,6 +47,18 @@ export const HomeHead = ({ showAstro }) => {
 
 	return (
     <div ref={scrollRef} className={styles.headWrap}  > 
+
+      <div className={styles.container}>
+        {/* <motion.div  className={styles.button}>  */}
+          
+          <SaveTheEarthBtn  onClick={() => setShow(!show)}/>
+             {show &&
+          <Barry /> 
+}
+         
+      {/* </motion.div>   */}
+     
+    </div>
       {/* <motion.div className={styles.stars}>
         <Stars  />
       </motion.div> */}
@@ -67,17 +80,19 @@ export const HomeHead = ({ showAstro }) => {
     </motion.div>
 
     {/*-----------spaceship-------------- */}
-    <motion.div style={{y}} className={styles.motherShip}>
+
+    {/* <motion.div style={{y}} className={styles.motherShip}>
       <Image
         src={moShip}
         alt={'Mother Ship'}
         className={styles.motherImg}
         height={180}
         width={180}
+        priority
       />
-    </motion.div>
+    </motion.div> */}
 
-
+{/* 
     <motion.div className={styles.gal} >
 
       <Galaxy />
@@ -88,7 +103,7 @@ export const HomeHead = ({ showAstro }) => {
 
       <Dip/>
       
-    </motion.div>
+    </motion.div> */}
   
     
 
@@ -97,7 +112,9 @@ export const HomeHead = ({ showAstro }) => {
   
     
     {/* ----------sticks-------------- */}
-    <motion.div style={{y}} className={styles.stickOne}>
+
+
+    {/* <motion.div style={{y}} className={styles.stickOne}>
       <Image
         src={stickOne}
         alt='stick-one'
@@ -144,7 +161,7 @@ export const HomeHead = ({ showAstro }) => {
         height={100}
         width={100}
       />
-    </motion.div>
+    </motion.div> */}
 
 
     {/* ---------------abduction---------------- */}
@@ -154,16 +171,18 @@ export const HomeHead = ({ showAstro }) => {
 
     
      {/* ----------------astro---------------- */}
-      <motion.div className={styles.astro} viewport={{root: scrollRef}}>
-        {show ?
+
+      {/* <motion.div className={styles.astro} >
+        {show &&
         <AstroBoy />
-        :
-        null
+  
         }
-      </motion.div>
+      </motion.div> */}
 
      {/* ----------------zappeddd---------------- */}
-      <motion.div  className={styles.zap} >
+
+
+      {/* <motion.div  className={styles.zap} >
         <Zapped />
       </motion.div>
 
@@ -174,18 +193,8 @@ export const HomeHead = ({ showAstro }) => {
 
       <motion.div  className={styles.building}>
         <SmBbVg />
-      </motion.div>  
-
-      {/* <motion.div  className={styles.button}> */}
-
-        {/* <motion.input type='checkbox' className={styles.input}/>
-        <motion.label htmlFor='input' className={styles.labelBtn}>
-          Save the World
-          </motion.label> */}
-
-        {/* <ThreeDButton  onClick={() => setShow(!show)}/>
       </motion.div>   */}
-
+    
       
     </div> 
 	

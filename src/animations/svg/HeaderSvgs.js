@@ -2,6 +2,7 @@
 
 import { easeIn, easeInOut, easeOut, motion, reverse } from "framer-motion";
 
+
 const childO = {
 	hidden: { opacity: 0} ,
     visible: { opacity: 1 },
@@ -23,15 +24,17 @@ const variants = {
     }
 };
 const astro = {
-    hidden: {  x: 0, y: 0, scale: .2, pathLength: 0, },
+    hidden: {  x: 0, y: 0, scale: .2,  opacity: 0 },
     visible: {
-		pathLength: 1,
-        x: [140, 0], duration: 20,
-    	y: [0, 140], duration: 20,
-		scale: 1, duration: 20,
-		pathLength: { type: "spring", duration: 8, bounce: 160, velocity: 60, ease: easeIn  },
+		
+		opacity: 1,
+        x: [200, 0], duration: 2,
+    	y: [0, 200], duration: 2,
+		scale: 1, duration: 2,
+		// pathLength: { type: "spring", duration: 8, bounce: 160, velocity: 60, ease: easeIn  },
         transition: { delay: 2.5, duration: 8,  },
-    }
+    },
+	exit:{opacity: 0}
 };
 
 const duct = {
@@ -55,16 +58,15 @@ const duct = {
 
 const dip = {
   hidden: { opacity: 0, },
-  visible: (i) => {
-    const delay = 1 + i * 0.5;
-    return {
+  visible: {
+    
       opacity: 1,
       transition: {
-        opacity: { delay, duration: .4, ease: easeInOut , },
+        opacity: { duration: .2 },
 		when:'beforeChildren',
 		staggerChildren: .4
-      },
-    };
+     
+    }
   }
 };
 
@@ -89,8 +91,8 @@ const pathVariants= {
 export const Galaxy = () => {
   return (
     <motion.svg xmlns="http://www.w3.org/2000/svg" 
-        width='100px'  height='145px' viewBox="0 0 400 400"
-        // variants={variants}
+        width='80px'  height='80px' viewBox="0 0 400 400"
+        variants={variants}
         initial='hidden'
         animate='visible'
 		fillOpacity={0}
@@ -505,7 +507,7 @@ export const AstroBoy = ({Avariants}) => {
 			variants={astro}
         	initial='hidden'
         	animate='visible'
-			exit={{opacity: 0}}
+			exit='exit'
 			
 		>
 			<motion.path fillOpacity={0} variants={pathVariants} custom={7} fill="#000000" opacity="0.000000"  
@@ -1468,7 +1470,7 @@ export const Dip = () => {
 	return(
 	<motion.svg 
 		xmlns="http://www.w3.org/2000/svg"  
-		height="100px" width="200px" 
+		height="80px" width="80px" 
 		variants={dip}
         initial='hidden'
         animate='visible'
@@ -1930,7 +1932,7 @@ export const BbVg = () => {
 	return(
 		
 	<motion.svg xmlns="http://www.w3.org/2000/svg" 
-		height="300px" width="300px" 
+		height="400px" width="400px" 
 		viewBox="0 0 400 400"
 		variants={dip}
     	initial='hidden'
@@ -2362,7 +2364,7 @@ export const BbVg = () => {
 			C360.702759,276.966522 360.702759,286.691193 360.702759,297.000000 
 			C347.665100,297.000000 334.583191,297.000000 321.001587,297.000000 
 		z"/>
-		<motion.path variants={dip}     fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}     fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M194.995682,278.219177 
 			C194.999222,291.306702 194.999222,303.912781 194.999222,316.758118 
@@ -2371,7 +2373,7 @@ export const BbVg = () => {
 			C185.964310,276.007568 189.578781,275.925659 193.182526,276.085327 
 			C193.808914,276.113098 194.390091,277.161011 194.995682,278.219177 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M128.000000,64.074791 
 			C128.000000,61.604328 128.000000,59.624794 128.000000,57.323257 
@@ -2380,7 +2382,7 @@ export const BbVg = () => {
 			C136.743805,97.679932 132.682190,97.679932 128.000000,97.679932 
 			C128.000000,86.715347 128.000000,75.640533 128.000000,64.074791 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M162.935760,57.000004 
 			C164.852783,57.071548 166.291214,57.143093 167.854080,57.220829 
@@ -2389,7 +2391,7 @@ export const BbVg = () => {
 			C155.313263,84.412140 155.313263,71.026794 155.313263,57.000000 
 			C157.614273,57.000000 160.035706,57.000000 162.935760,57.000004 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M182.411194,369.567230 
 			C182.079575,355.955597 182.079575,342.691406 182.079575,329.216248 
@@ -2397,7 +2399,7 @@ export const BbVg = () => {
 			C194.788254,342.816193 194.788254,356.199707 194.788254,369.914673 
 			C190.639328,369.914673 186.691071,369.914673 182.411194,369.567230 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M168.000000,334.120178 
 			C168.000000,346.223633 168.000000,357.838257 168.000000,369.725494 
@@ -2406,7 +2408,7 @@ export const BbVg = () => {
 			C159.354172,329.270844 163.415237,329.270844 168.000000,329.270844 
 			C168.000000,330.752289 168.000000,332.191803 168.000000,334.120178 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M182.000000,186.000946 
 			C182.000000,179.868500 182.000000,174.235703 182.000000,168.302399 
@@ -2415,7 +2417,7 @@ export const BbVg = () => {
 			C190.712906,208.697327 186.651138,208.697327 182.000000,208.697327 
 			C182.000000,201.340347 182.000000,193.920486 182.000000,186.000946 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M167.999969,280.150787 
 			C168.000000,292.580933 168.000000,304.527039 168.000000,316.735229 
@@ -2424,7 +2426,7 @@ export const BbVg = () => {
 			C158.408829,276.000275 161.533691,276.211487 164.616196,275.940704 
 			C167.679947,275.671539 168.384079,277.052917 167.999969,280.150787 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M165.806564,168.004623 
 			C166.857269,169.117172 167.914444,170.221237 167.925171,171.335403 
@@ -2433,7 +2435,7 @@ export const BbVg = () => {
 			C155.356689,195.503662 155.356689,182.117020 155.356689,168.000839 
 			C158.509293,168.000839 161.918182,168.000839 165.806564,168.004623 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M182.000000,232.042145 
 			C182.000000,228.905045 182.000000,226.262161 182.000000,223.311798 
@@ -2442,7 +2444,7 @@ export const BbVg = () => {
 			C190.727097,263.689972 186.665253,263.689972 182.000000,263.689972 
 			C182.000000,253.359161 182.000000,242.947769 182.000000,232.042145 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M168.000000,235.015152 
 			C168.000000,244.804550 168.000000,254.097214 168.000000,263.694214 
@@ -2451,7 +2453,7 @@ export const BbVg = () => {
 			C159.282654,223.304993 163.344559,223.304993 168.000000,223.304993 
 			C168.000000,226.989838 168.000000,230.754135 168.000000,235.015152 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M168.000000,123.020981 
 			C168.000000,133.142410 168.000000,142.766342 168.000000,152.694244 
@@ -2461,7 +2463,7 @@ export const BbVg = () => {
 			C161.452713,111.754425 164.454636,112.001518 168.000000,112.001518 
 			C168.000000,115.655823 168.000000,119.089668 168.000000,123.020981 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M128.000427,149.817795 
 			C128.000061,138.521759 128.117325,127.708618 127.933640,116.900589 
@@ -2471,7 +2473,7 @@ export const BbVg = () => {
 			C137.232819,152.996689 133.776550,153.172058 130.361710,152.873581 
 			C129.506378,152.798813 128.784180,151.200684 128.000427,149.817795 
 		z"/>
-		<motion.path variants={dip}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
+		<motion.path variants={childO}  fill="#fffb00" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M114.000000,129.001511 
 			C114.000000,137.129959 114.000000,144.758652 114.000000,152.692657 
@@ -2481,7 +2483,7 @@ export const BbVg = () => {
 			C107.445396,111.753998 110.447128,112.001549 114.000000,112.001549 
 			C114.000000,117.655151 114.000000,123.078445 114.000000,129.001511 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M192.806976,152.995407 
 			C189.039963,152.999161 185.751694,152.999161 182.004837,152.999161 
@@ -2491,7 +2493,7 @@ export const BbVg = () => {
 			C194.992920,125.308601 195.016281,138.235794 194.920441,151.162109 
 			C194.915894,151.775955 193.854782,152.381973 192.806976,152.995407 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M265.957855,245.000000 
 			C269.093719,245.000000 271.735321,245.000000 274.687592,245.000000 
@@ -2500,7 +2502,7 @@ export const BbVg = () => {
 			C239.310699,253.729233 239.310699,249.667938 239.310699,245.000000 
 			C247.970551,245.000000 256.717102,245.000000 265.957855,245.000000 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M274.567230,292.588806 
 			C262.621674,292.920441 251.023544,292.920441 239.216248,292.920441 
@@ -2508,7 +2510,7 @@ export const BbVg = () => {
 			C251.150085,280.212524 262.867493,280.212524 274.914673,280.212524 
 			C274.914673,284.361755 274.914673,288.309448 274.567230,292.588806 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M274.999573,324.849854 
 			C275.451904,328.210815 273.548492,328.021606 271.625366,328.015594 
@@ -2517,7 +2519,7 @@ export const BbVg = () => {
 			C250.859802,315.342285 262.580231,315.342285 274.999939,315.342285 
 			C274.999939,318.209564 274.999939,321.290466 274.999573,324.849854 
 		z"/>
-		<motion.path variants={childO} fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
+		<motion.path fill="#f108a4" opacity="1.000000" stroke="#fffb00" 
 			d="
 		M275.000000,356.935730 
 			C274.928680,358.852570 274.857361,360.290802 274.779816,361.853790 
@@ -2537,7 +2539,7 @@ export const SmBbVg = () => {
 
 	<motion.svg 
 		xmlns="http://www.w3.org/2000/svg"
-		height="200px" width="200px" 
+		height="300px" width="300px" 
 		// variants={dip}
     	initial='hidden'
     	animate='visible'
