@@ -1,9 +1,39 @@
-import { motion, opacity, easeInOut, easeOut, delay } from 'framer-motion';
+import { motion, opacity, easeInOut, easeOut, delay, easeIn } from 'framer-motion';
 import { useState } from 'react';
 const childO = {
 	hidden: { opacity: 0} ,
     visible: { opacity: 1 },
 };
+
+
+const scaleBox = {
+  hidden: {opacity: 0, scale: 0.2},
+  visible: { 
+      opacity: 1,
+	  scale: 1,
+      transition: {
+        default: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01]  },
+        scale: {
+			// type: "spring",
+          	duration: .8,
+			ease: easeIn
+        
+		   }, 
+      },
+	  
+    
+  }
+};
+
+const svgVariants = {
+    hidden: { opacity: .6, },
+    visible: {
+        rotate: [8, 0],
+		opacity: 1,
+        transition:{ delay: 1, repeat: Infinity, duration: .8, repeatDelay: .5, ease:  [0.655, 0.83, 0.915, 0.955]  }
+	
+    }
+}
 
 const pathVariants= {
   hidden: { pathLength: 0, opacity: 0, scale: 0 },
@@ -14,7 +44,7 @@ const pathVariants= {
       opacity: 1,
 	  scale: 1,
       transition: {
-        pathLength: { delay, type: "spring", duration: 8, bounce: 20,  },
+        pathLength: { delay, type: "spring", duration: 8, bounce: 160,  },
         opacity: { delay, duration: 2, ease: easeOut   }, 
       },
 	  
@@ -490,14 +520,17 @@ export const Barry = () => {
 	<motion.svg 
 		xmlns="http://www.w3.org/2000/svg" 
 	
-		width="200px" 
-		height="200px" 
+		width="300px" 
+		height="300px" 
 		viewBox="0 0 200 200"
-		variants={pathVariants}
+		variants={scaleBox}
 		initial='hidden'
         animate='visible'
+		style={{backgroundColor: 'rgb(158, 0, 178,  .2)'}}
+
+		
 	>
-		<motion.path custom={1} variants={pathVariants} opacity="1.000000"stroke="#0077ff" 
+		<motion.path  fillOpacity={0}   custom={1} variants={scaleBox} opacity="1.000000" 
 			d="
 			M22.000000,201.000000 
 			C15.004107,201.000000 8.008215,201.000000 1.009241,201.000000 
@@ -550,7 +583,7 @@ export const Barry = () => {
 			C22.216673,185.331360 21.999115,193.169403 22.000000,201.000000 
 		z"/>
 		{/* body */}
-		<motion.path custom={5} variants={pathVariants}  fill="#62FFB1" opacity="1.000000" stroke="#62FFB1" 
+		<motion.path  custom={5}  variants={pathVariants} fill="#62FFB1"  opacity="1.000000" stroke="#0077ff" 
 	d="
 	M33.000000,201.000000 
 	C30.958334,201.000000 28.916666,201.000000 26.438803,200.533234 
@@ -579,7 +612,8 @@ export const Barry = () => {
 	C43.207954,156.856979 44.004803,151.155319 37.795658,147.040756 
 	C36.138680,165.684570 34.569340,183.342285 33.000000,201.000000 
 z"/>
-		<motion.path custom={3} variants={pathVariants} fill="#62FFB1" opacity="1.000000" stroke="#0077ff" 
+		{/* majority-outline */}
+		<motion.path  custom={1} variants={pathVariants}  opacity="1.000000" stroke="#0077ff" 
 	d="
 	M72.399994,201.000000 
 	C73.001625,189.235947 73.757652,177.443924 75.093735,165.717987 
@@ -660,7 +694,8 @@ z"/>
 	C93.608261,88.962746 98.401985,74.665436 101.068344,59.601204 
 	C102.341835,52.406315 103.026375,45.447937 99.095528,38.920780 
 z"/>
-		<motion.path custom={3} variants={pathVariants} fill="#64FFB1" opacity="1.000000" stroke="#0077ff" 
+		{/* armpit */}
+		<motion.path  custom={1} variants={pathVariants}  opacity="1.000000"  
 	d="
 M33.399994,201.000000 
 	C34.569340,183.342285 36.138680,165.684570 37.795658,147.040756 
@@ -674,8 +709,8 @@ M33.399994,201.000000
 	C35.933331,201.000000 34.866661,201.000000 33.399994,201.000000 
 z"/>
 		
-		{/* eyes */}
-		<motion.path custom={3} variants={pathVariants} fill="#64FFB1" opacity="1.000000" stroke="#0077ff"  
+		{/* inner-head */}
+		<motion.path custom={5} variants={pathVariants} fill="#62FFB1" opacity="1.000000"   
 	d="
 	M99.073250,38.839005 
 	C103.026375,45.447937 102.341835,52.406315 101.068344,59.601204 
@@ -712,6 +747,7 @@ z"/>
 	C71.291779,101.904129 70.648758,101.334137 69.903915,100.975769 
 	C68.459412,100.280769 66.957657,99.704765 64.687515,99.066254 
 z"/>
+		{/* eye */}
 		<motion.path custom={3} variants={pathVariants} fill="#000" opacity="1.000000" stroke="#0077ff" 
 	d="
 	M50.232880,79.716583 
@@ -724,7 +760,7 @@ z"/>
 	C57.376881,87.214821 54.192833,85.536201 52.158466,82.390457 
 	C51.629246,81.572121 51.044918,80.789436 50.232880,79.716583 
 z"/>
-		<motion.path custom={3} variants={pathVariants} fill="#000" opacity="1.000000" stroke="#0077ff" 
+		<motion.path custom={4} variants={pathVariants} fill="#000" opacity="1.000000" stroke="#0077ff" 
 	d="
 	M99.084389,38.879890 
 	C99.224098,39.921986 99.472153,41.001663 99.509117,42.088520 
@@ -736,7 +772,7 @@ z"/>
 	C87.758316,37.603977 95.132133,36.463448 98.880150,39.329323 
 	C99.177994,38.940323 99.095528,38.920780 99.084389,38.879890 
 z"/>
-		<motion.path custom={3} variants={pathVariants} fill="#000" opacity="1.000000" stroke="#0077ff" 
+		<motion.path custom={6} variants={svgVariants} fill="#FF0054"  opacity="1.000000" stroke="#0077ff" 
 	d="
 	M65.083572,99.072861 
 	C66.957657,99.704765 68.459412,100.280769 69.903915,100.975769 

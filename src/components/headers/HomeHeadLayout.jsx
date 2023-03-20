@@ -5,6 +5,7 @@ import { XVelocity } from '../../animations/scroll/XaxisInfinite.jsx';
 import { Galaxy, AstroBoy, UfoAbduction, Dip, SmBbVg, Stars, BbVg, } from '../../animations/svg/HeaderSvgs.js';
 import { Barry, Zapped } from '../../animations/svg/Characters.js';
 import { SaveTheEarthBtn } from '../buttons/Buttons.jsx';
+import AnimatedText from '../../animations/text/AnimatedText';
 import styles from './homehead.module.css';
 
 // Images
@@ -41,23 +42,47 @@ export const HomeHead = () => {
   const satY = useParallax(scrollYProgress, 150);
 
 
-  console.log(scrollRef)
+    const placeholderText = [
+    { type: "heading1", text: "Whatzzzz UPPPPPPPP!!!!!" },
+    {
+      type: "heading2",
+      text: "Bittttttttttttch"
+    }
+  ];
+
+  const textDiv = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025
+      }
+    }
+  };
 
 
 	return (
     <div ref={scrollRef} className={styles.headWrap}  > 
 
-      <div className={styles.container}>
-      
-          
-          <SaveTheEarthBtn  onClick={() => setShow(!show)}/>
-             {show &&
-          <Barry /> 
-              }
-         
+      <motion.div className={styles.container}>
+        <SaveTheEarthBtn  onClick={() => setShow(!show)}/>
 
+          {show &&
+            <motion.div 
+              className={styles.barryText}
+              variants={textDiv}
+              initial="hidden"
+              animate="visible"
+            >
+              <div className={styles.text}>
+                {placeholderText.map((item, index) => {
+                  return <AnimatedText {...item} key={index} />
+                })}
+              </div>
+              <Barry /> 
+            </motion.div>
+          }
+      </motion.div>
      
-    </div>
+   
   
            
       
@@ -162,6 +187,7 @@ export const HomeHead = () => {
 
 
     {/* ---------------abduction---------------- */}
+
     <motion.div style={{y}} className={styles.abduct}>
       <UfoAbduction  />
     </motion.div>
